@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Models\Scopes;
+
+use Illuminate\Database\Eloquent\Scope;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
+
+class ActiveScope implements Scope
+{
+    public function apply(Builder $builder, Model $model)
+    {
+        if (in_array('active', $model->getFillable())) {
+            $builder->where('active', '=', 1);
+        }
+    }
+}

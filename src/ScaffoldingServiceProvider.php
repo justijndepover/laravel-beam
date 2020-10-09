@@ -11,6 +11,7 @@ class ScaffoldingServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 Commands\InstallCommand::class,
+                Commands\ModuleCommand::class,
             ]);
         }
     }

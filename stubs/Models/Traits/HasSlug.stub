@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Models\Traits;
+
+use \Str;
+
+trait HasSlug
+{
+    public static function bootHasSlug()
+    {
+        static::saving(function($model){
+            $model->attributes['slug'] = $model->generateSlug();
+        });
+    }
+
+    public function generateSlug($slug = null, $index = 0)
+    {
+        $slug = Str::slug($slug ?? $this->name);
+        $newSlug = $slug . (($index == 0) ? '' : '-' . $index);
+
+        if (!self::where('slug', '=', $newSlug)->where('id', '<>', $this->id)->where('locale', '=', $this->locale)->count() == 0) {
+            $index = $index + 1;
+            $newSlug = $this->generateSlug($slug, $index);
+        }
+
+        return $newSlug;
+    }
+}

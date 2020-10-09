@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Models\Scopes;
+
+use Illuminate\Database\Eloquent\Scope;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
+
+class ActiveTranslationScope implements Scope
+{
+    public function apply(Builder $builder, Model $model)
+    {
+        if (in_array('active', $model->translatedAttributes ?? [])) {
+            $builder->whereTranslation('active', true, app()->getLocale());
+        }
+    }
+}
