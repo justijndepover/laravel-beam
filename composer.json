@@ -11,5 +11,15 @@
     "require": {},
     "require-dev": {
         "orchestra/testbench": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Justijndepover\\Scaffolding\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Justijndepover\\Scaffolding\\Tests\\": "tests/"
+        }
     }
 }
