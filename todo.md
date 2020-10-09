@@ -1,10 +1,25 @@
-what to do with this package?
+# Package todo's
 
+```
 scaffold:install
-- generate folder structure:
-    - /Http/Controller/Admin
-    - /Http/Controller/Api
-- generate basic js setup
+```
+- generate models folder
+- generate resources
+    - install npm
+    - install tailwindcss
+    - install vue
 - make admin routes file
 - bind the admin routes file in the RouteServiceProvider
 - multi language
+- copy languages
+- deployer file
+- auth setup
+
+```
+scaffold:module
+```
+- generate model
+- generate Admin controller
+- generate view files
+- ask questions like: model name, fields, migrations
+- make the module available in the admin layout navigation
