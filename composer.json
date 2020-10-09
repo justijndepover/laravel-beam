@@ -1,0 +1,15 @@
+{
+    "name": "justijndepover/scaffolding",
+    "description": "Easily scaffold Laravel modules",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Justijn Depover",
+            "email": "justijndepover@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "orchestra/testbench": "^6.2"
+    }
+}
