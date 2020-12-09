@@ -12,6 +12,7 @@ class BeamServiceProvider extends ServiceProvider
             $this->commands([
                 Commands\InstallCommand::class,
                 Commands\FileStructureCommand::class,
+                Commands\StubsCommand::class,
                 Commands\ModuleCommand::class,
             ]);
         }

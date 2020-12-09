@@ -8,7 +8,7 @@ class InstallCommand extends Command
 {
     protected $signature = 'beam:install';
 
-    protected $description = 'Install Laravel Beam scaffolding';
+    protected $description = 'Run the Laravel Beam installer';
 
     private $commands;
 
@@ -23,7 +23,11 @@ class InstallCommand extends Command
         if ($this->confirm('Do you want to setup file structure?', true)) {
             $this->executeLater(FileStructureCommand::class);
         }
-        // $this->confirm('Do you want to install custom stub files?', true);
+
+        if ($this->confirm('Do you want to install custom stub files?', true)) {
+            $this->executeLater(StubsCommand::class);
+        }
+
         // $this->confirm('Do you want to install laravel-inbox?', true);
         // $this->confirm('Do you want to install laravel-cookie-consent?', true);
         // $this->choice('What css framework do you want to install?', ['Tailwindcss', 'Bootstrap', 'None'], 0);
