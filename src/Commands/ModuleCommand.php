@@ -1,14 +1,14 @@
 <?php
 
-namespace Justijndepover\Scaffolding\Commands;
+namespace Justijndepover\Beam\Commands;
 
 use Illuminate\Console\Command;
 
 class ModuleCommand extends Command
 {
-    protected $signature = 'scaffold:module';
+    protected $signature = 'beam:module';
 
-    protected $description = 'Install a module';
+    protected $description = 'Install a beam module';
 
     public function handle()
     {

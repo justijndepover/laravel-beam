@@ -1,10 +1,10 @@
 <?php
 
-namespace Justijndepover\Scaffolding;
+namespace Justijndepover\Beam;
 
 use Illuminate\Support\ServiceProvider;
 
-class ScaffoldingServiceProvider extends ServiceProvider
+class BeamServiceProvider extends ServiceProvider
 {
     public function register()
     {
@@ -18,6 +18,5 @@ class ScaffoldingServiceProvider extends ServiceProvider
 
     public function boot()
     {
-
     }
 }

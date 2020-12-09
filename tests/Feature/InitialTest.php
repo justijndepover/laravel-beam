@@ -1,6 +1,6 @@
 <?php
 
-namespace Justijndepover\Scaffolding\Tests;
+namespace Justijndepover\Beam\Tests;
 
 use Orchestra\Testbench\TestCase;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Justijndepover\Scaffolding\Commands;
+namespace Justijndepover\Beam\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
@@ -9,9 +9,9 @@ use Symfony\Component\Finder\SplFileInfo;
 
 class InstallCommand extends Command
 {
-    protected $signature = 'scaffold:install';
+    protected $signature = 'beam:install';
 
-    protected $description = 'Install basic scaffolding';
+    protected $description = 'Install laravel beam scaffolding';
 
     private $paths = [
         'Http/Controllers/Admin',

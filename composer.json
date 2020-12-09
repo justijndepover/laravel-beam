@@ -1,5 +1,5 @@
 {
-    "name": "justijndepover/scaffolding",
+    "name": "justijndepover/beam",
     "description": "Easily scaffold Laravel modules",
     "license": "MIT",
     "authors": [
@@ -14,18 +14,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Justijndepover\\Scaffolding\\": "src/"
+            "Justijndepover\\Beam\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Justijndepover\\Scaffolding\\Tests\\": "tests/"
+            "Justijndepover\\Beam\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Justijndepover\\Scaffolding\\ScaffoldingServiceProvider"
+                "Justijndepover\\Beam\\BeamServiceProvider"
             ]
         }
     },
