@@ -32,10 +32,13 @@ class InstallCommand extends Command
             $this->executeLater(LaravelInboxCommand::class);
         }
 
-        // $this->confirm('Do you want to install laravel-cookie-consent?', true);
-        // $this->choice('What css framework do you want to install?', ['Tailwindcss', 'Bootstrap', 'None'], 0);
-        // $this->confirm('Do you want to setup basic authentication?', true);
-        // $this->confirm('Do you want to install laravel-cms?', true);
+        if ($this->confirm('Do you want to install laravel-cookie-consent?', true)) {
+            //
+        }
+
+        if ($this->choice('What css framework do you want to install?', ['Tailwindcss', 'Bootstrap', 'None'], 0)) {
+            //
+        }
 
         $this->info('Installing the assets');
         $this->executeCommands();
