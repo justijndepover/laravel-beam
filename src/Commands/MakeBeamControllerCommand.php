@@ -5,6 +5,7 @@ namespace Justijndepover\Beam\Commands;
 use Illuminate\Console\GeneratorCommand;
 use InvalidArgumentException;
 use Symfony\Component\Console\Input\InputOption;
+use Str;
 
 class MakeBeamControllerCommand extends GeneratorCommand
 {
@@ -75,6 +76,7 @@ class MakeBeamControllerCommand extends GeneratorCommand
             'DummyModelVariable' => lcfirst(class_basename($modelClass)),
             '{{ modelVariable }}' => lcfirst(class_basename($modelClass)),
             '{{modelVariable}}' => lcfirst(class_basename($modelClass)),
+            '{{ modelSingular }}' => Str::snake(class_basename($modelClass)),
         ]);
     }
 

@@ -10,26 +10,26 @@ class {{ class }} extends Controller
 {
     public function index()
     {
-        return view('', [
+        return view('admin.{{ modelSingular }}.index', [
             '{{ modelVariable }}' => {{ model }}::paginate(50),
         ]);
     }
 
     public function create()
     {
-        return view('');
+        return view('admin.{{ modelSingular }}.create');
     }
 
     public function store(Request $request)
     {
         ${{ modelVariable }} = $request->validated();
 
-        return redirect()->back();
+        return redirect()->route('admin.{{ modelSingular }}.index');
     }
 
     public function edit({{ model }} ${{ modelVariable }})
     {
-        return view('', [
+        return view('admin.{{ modelSingular }}.edit', [
             '{{ modelVariable }}' => ${{ modelVariable }},
         ]);
     }
@@ -37,12 +37,12 @@ class {{ class }} extends Controller
     public function update(Request $request, {{ model }} ${{ modelVariable }})
     {
         ${{ modelVariable }}->update($request->all());
-        return redirect()->back();
+        return redirect()->route('admin.{{ modelSingular }}.index');
     }
 
     public function destroy({{ model }} ${{ modelVariable }})
     {
         ${{ modelVariable }}->delete();
-        return redirect()->back();
+        return redirect()->route('admin.{{ modelSingular }}.index');
     }
 }
