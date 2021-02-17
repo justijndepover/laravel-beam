@@ -1,0 +1,48 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ namespacedModel }};
+use {{ rootNamespace }}Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class {{ class }} extends Controller
+{
+    public function index()
+    {
+        return view('', [
+            '{{ modelVariable }}' => {{ model }}::paginate(50),
+        ]);
+    }
+
+    public function create()
+    {
+        return view('');
+    }
+
+    public function store(Request $request)
+    {
+        ${{ modelVariable }} = $request->validated();
+
+        return redirect()->back();
+    }
+
+    public function edit({{ model }} ${{ modelVariable }})
+    {
+        return view('', [
+            '{{ modelVariable }}' => ${{ modelVariable }},
+        ]);
+    }
+
+    public function update(Request $request, {{ model }} ${{ modelVariable }})
+    {
+        ${{ modelVariable }}->update($request->all());
+        return redirect()->back();
+    }
+
+    public function destroy({{ model }} ${{ modelVariable }})
+    {
+        ${{ modelVariable }}->delete();
+        return redirect()->back();
+    }
+}

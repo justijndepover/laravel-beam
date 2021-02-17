@@ -15,6 +15,7 @@ class BeamServiceProvider extends ServiceProvider
                 Commands\StubsCommand::class,
                 Commands\ModuleCommand::class,
                 Commands\MakeActionCommand::class,
+                Commands\MakeBeamControllerCommand::class,
             ]);
         }
     }
